@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sun_moon_display"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.android.sunandmoon.SunMoonDisplay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:id="@+id/top_layout"
+                android:layout_alignParentStart="true">
+
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sun_click"
+            android:text="Sun"
+            android:textColor="#ffff"
+            android:layout_weight="1"
+            android:background="#424242"
+        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/moon_click"
+            android:layout_marginLeft="0.5dp"
+            android:text="Moon"
+
+            android:textColor="#ffff"
+            android:background="#424242"
+            android:onClick="display_moon"
+            android:layout_weight="1"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/top_layout"
+        android:background="@drawable/sun_onclickbackground">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_layout"
+        android:id="@+id/clock_layout"
+        android:orientation="vertical"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="3dp"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/location"
+            android:gravity="center_horizontal"
+
+            android:textSize="10pt"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+
+                    <com.example.android.sunandmoon.ClockActivityRise
+                        android:id="@+id/analog_clockRise"
+                        android:layout_height="150dp"
+                        android:layout_width="150dp"
+                        android:layout_marginBottom="5dp"
+                        ></com.example.android.sunandmoon.ClockActivityRise>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10pt"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/time_display_rise"/>
+
+
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp">
+
+
+                <com.example.android.sunandmoon.ClockActivitySet
+                    android:id="@+id/analog_clockSet"
+                    android:layout_height="150dp"
+                    android:layout_width="150dp"
+                    android:layout_marginBottom="5dp"
+                    ></com.example.android.sunandmoon.ClockActivitySet>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10pt"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/time_display_set"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/moon_phase_text"
+                android:layout_marginLeft="40dp"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:textSize="7pt"
+                android:textColor="#ffffff"
+                />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:id="@+id/moon_phase_image"
+                android:layout_height="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+
+                />
+
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="7pt"
+        android:textColor="#ffffff"
+        android:id="@+id/SunMoonDisplay_textview"
+        android:layout_weight="1"
+
+        />
+    </LinearLayout>
+
+    </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_menu_display"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_coding_tasks"
+
+    tools:context="com.example.android.sunandmoon.MainMenuDisplay">
+
+
+    <ImageButton
+
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+
+        android:src="@drawable/calendar_button"
+
+        android:id="@+id/calendar_button"
+        android:layout_below="@+id/calendar_textView"
+        android:layout_alignStart="@+id/location_button" />
+
+    <TextView
+        android:text="Select date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:textColor="#ffffff"
+        android:id="@+id/calendar_textView"
+        android:layout_below="@+id/location_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+
+    <ImageButton
+        android:text="Location"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:src="@drawable/location_button"
+        android:onClick="location_display"
+        android:id="@+id/location_button"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/location_textView"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+
+        android:layout_width="134dp"
+        android:layout_height="67dp"
+        android:onClick="go"
+        android:src="@drawable/go_button"
+        android:layout_marginBottom="19dp"
+        android:id="@+id/go_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Select location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="10pt"
+        android:layout_marginTop="180dp"
+
+        android:id="@+id/location_textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/go_button" />
+</RelativeLayout>
